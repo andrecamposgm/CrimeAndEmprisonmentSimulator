@@ -5,17 +5,17 @@
 		type="int" defaultValue="10000" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 		
-	<parameter name="average_rate_of_offending" displayName="Rate of Offending"
+	<parameter name="average_rate_of_offending" displayName="Percentage of Offending (λ1)"
 		type="int" defaultValue="5" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 
-	<parameter name="average_rate_of_reoffending" displayName="Rate of ReOffending"
+	<parameter name="average_rate_of_reoffending" displayName="Percentage of Reoffending (λ2)"
 		type="int" defaultValue="1" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 
 	<parameter name="imprisonment_probability" displayName="Certainty Of Punishment (P(I)):"
-		type="int" defaultValue="5" isReadOnly="false"
-		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+		type="double" defaultValue="5.0" isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 				
 	<parameter name="average_age" displayName="Average Population Age"
 		type="int" defaultValue="70" isReadOnly="false"
@@ -25,12 +25,12 @@
 		defaultValue="10" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 		
-	<parameter name="average_time_in_prison" displayName="Average time in prison"
+	<parameter name="average_time_in_prison" displayName="Average time in prison (S)"
 		type="int" defaultValue="5" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 	
 	<parameter name="standard_deviation_for_time_in_prison" displayName="Standard Deviation of Time in Prison"
-		type="int" defaultValue="5" isReadOnly="false"
+		type="int" defaultValue="2" isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 		
 	<parameter name="randomSeed" displayName="Default Random Seed"

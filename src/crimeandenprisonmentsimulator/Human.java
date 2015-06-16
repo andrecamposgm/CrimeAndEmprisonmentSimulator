@@ -35,7 +35,7 @@ public abstract class Human {
 		commitedCrimes 	= fromOtherHuman.commitedCrimes;
 	}
 
-	@ScheduledMethod(start = 1, interval = 0.1)
+	@ScheduledMethod(start = 1, interval = 1)
 	public final void anniversaryInternal() { 
 		age++;
 		if(age > death) {

@@ -52,6 +52,9 @@ public class SimulationBuilder implements ContextBuilder<Object>{
 	
 	private static final String AVERAGE_RATE_OF_REOFFENDING = "average_rate_of_reoffending";
 	
+//	private static final String CRIMES_PER_YEAR = "number_of_crimes_per_year";
+//	private static final String FLAGRANT = "number_of_crimes_per_year";
+	
 	
 	@Override
 	public Context<Object> build(Context<Object> context) {
@@ -63,7 +66,7 @@ public class SimulationBuilder implements ContextBuilder<Object>{
 		Human.setStandardDeviationOfPopulationAge(parameters.getInteger(STD_DEVIATION_AGE));
 		
 		// Imprisonment probability 
-		Offender.setImprisonmentProbability(parameters.getInteger(IMPRISONMENT_PROBABILITY));
+		Offender.setImprisonmentProbability(parameters.getDouble(IMPRISONMENT_PROBABILITY));
 
 		// Offenders without crimes 
 		OffenderWithoutRecords.setAverageRateOfOffending(parameters.getInteger(AVERAGE_RATE_OF_OFFENDING));
@@ -85,10 +88,10 @@ public class SimulationBuilder implements ContextBuilder<Object>{
 
 	private void randomizeOffenderPosition(Context<Object> context, Grid<Object> grid,
 			ContinuousSpace<Object> space) {
-		for (Object obj : context) {
-			NdPoint pt = space.getLocation(obj);
-			grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
-		}
+//		for (Object obj : context) {
+//			NdPoint pt = space.getLocation(obj);
+//			grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
+//		}
 	}
 
 	private void createInitialOffenders(Context<Object> context,

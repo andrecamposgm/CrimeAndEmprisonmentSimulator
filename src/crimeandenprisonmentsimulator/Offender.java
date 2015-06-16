@@ -14,9 +14,10 @@ import repast.simphony.util.ContextUtils;
  */
 public abstract class Offender extends Human {
 
+	private static Double imprisonmentProbability;
+	
 	private static final Random imprisonmentRandomizer = new Random();
 	private static final Random crimeRandomizer = new Random();
-	private static Integer imprisonmentProbability;
 	private boolean commitedCrimeNow = false; 
 	
 	public Offender() { 
@@ -34,7 +35,7 @@ public abstract class Offender extends Human {
 		}
 	}
 
-	public static void setImprisonmentProbability(Integer integer) {
+	public static void setImprisonmentProbability(Double integer) {
 		Offender.imprisonmentProbability = integer;
 	}
 	
